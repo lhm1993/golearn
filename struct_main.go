@@ -39,10 +39,14 @@ func main() {
 		log.Fatalf("json marshalindent filed:%s", err)
 	}
 	fmt.Printf("%s\n", date)
-	var titles []struct{ Titles string }
+	var titles []struct {
+		Title string
+		Year  int `json:"released"`
+		Actor []string
+	}
 	if err := json.Unmarshal(date, &titles); err != nil {
 		log.Fatalf("JSON unmarshal failed :%", err)
 	}
-	fmt.Printf("%#v\n", titles)
-	var test []string = []string{"1", "2"}
+	fmt.Printf("%v\n", titles)
+	//var test []string = []string{"1", "2"}
 }
