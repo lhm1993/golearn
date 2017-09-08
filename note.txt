@@ -1,0 +1,18 @@
+1. define a variable
+	1.1 var 
+	    var name type [=expression] expression 可以省略
+	    var name = expression， expression不可以省略，编译器自己判断name的类型，如果省略expression，编译报错
+	    := 短变量声明方式
+	1.2 type
+	    type name type1，type1为底层数据类型，句首的type是type声明的关键字，不可省略，使用type声明的变量在声明时不能赋值
+	1.3 const
+	    const(
+	    	variable_1 [type]=value_1
+		variable_2 [type]
+		variable_3 [type]
+	    )
+	    其中，如果不设置variable_2和variable_3的值，它们会和variable_1的值相同，都等于value_1；
+	    如果使用iota，则会动态增长；
+	    如果不设置variable_i的type值和初始值，当前variable_i则会跟随上一个常量值variable_i-1的类型type和值value_i-1;ZZ
+
+
